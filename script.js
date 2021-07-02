@@ -69,7 +69,7 @@ form.addEventListener("submit", (event) => {
           const ul = document.createElement("ul");
 
           ul.addEventListener('mouseleave', ()=>{
-            spanSuggestionBox.style.display="left"
+            spanSuggestionBox.style.display="none"
           })
 
           // Adding Suggestion

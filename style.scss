@@ -1,0 +1,153 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;800&display=swap");
+
+:root {
+  --gradient: linear-gradient(-45deg, #845ec2, #d65db1, #ff6f91, #ff9671, #ffc75f, #f9f871);
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  height: 100%;
+}
+
+body {
+  box-sizing: inherit;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.6rem;
+  background:var(--gradient); 
+  background-size: 400%;
+  animation:  bg-animation 10s infinite alternate;
+}
+
+// h1{
+//   color: #242424;
+//   margin-bottom: 2rem 0;
+// }
+
+form {
+  background: linear-gradient(to right,#d65db1, #ff6f91);
+  border-radius: 5px;
+  padding: 1rem 1rem;
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 1rem;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+#submit-btn {
+  padding: 0.6rem 2rem;
+  background-color: #ff9671;
+  color: #fefefe;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+#output {
+  width: 80%;
+  padding: 1rem;
+  min-height: 30rem;
+  background: #fefefe;
+  overflow-y: scroll;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.container {
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+
+#message {
+    text-align: center;
+}
+span {
+  display: inline-block;
+  margin: 5px 2px; 
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+.text {
+  position: relative;
+}
+
+.word {
+}
+
+.suggestions {
+  position: absolute;
+  height: 100%;
+  z-index: 10;
+
+
+  ul {
+    background-color: #2ecc70b9;
+    padding: .5rem 1rem;
+    border-radius: 5px;
+
+    li {
+      margin: 5px 2px;
+      background-color: #fff;
+      padding: 0.5rem 3rem;
+      border-radius: 5px;
+      cursor: pointer;
+
+      &:hover {
+        filter: brightness(90%);
+      }
+    }
+  }
+}
+
+
+.file-btn{
+  background-color: #fff;
+  padding: 4px 8px;
+  border-radius: 5px;
+  font-size: 13.3px;
+}
+
+.bad-word{
+    color: red;
+    text-decoration: underline;
+}
+
+.error{
+    text-align: center;
+    color: red;
+    text-transform: uppercase;
+    font-size: 1.6rem;
+}
+
+
+@keyframes bg-animation{
+    0%{background-position: left;}
+    100%{background-position: right;}
+}
+
+@media (min-width:45em){
+  form{
+    width: 50%;
+  }
+  #output{
+    width: 50%;
+  }
+}
